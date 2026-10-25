@@ -26,12 +26,15 @@ Blog.init({
   year: {
     type: DataTypes.INTEGER,
     validate: {
+      isInt: {
+        msg: 'Year must be an integer'
+      },
       min: {
-        args: 1991,
+        args: [1991],
         msg: 'Year must be greater than or equal to 1991'
       },
       max: {
-        args: new Date().getFullYear(),
+        args: [new Date().getFullYear()],
         msg: 'Year must be less than or equal to ' + new Date().getFullYear()
       }
     }

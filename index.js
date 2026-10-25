@@ -7,6 +7,7 @@ const blogsRouter = require('./controllers/blogs')
 const usersRouter = require('./controllers/users')
 const authorsRouter = require('./controllers/authors')
 const loginRouter = require('./controllers/login')
+const logoutRouter = require('./controllers/logout')
 const resetRouter = require('./controllers/reset')
 const readingListsRouter = require('./controllers/readinglists')
 
@@ -17,6 +18,7 @@ app.use('/api/authors', authorsRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/blogs', blogsRouter)
 app.use('/api/login', loginRouter)
+app.use('/api/logout', logoutRouter)
 app.use('/api/readinglists', readingListsRouter)
 console.log('TESTING:', TESTING) // Dodajemy logowanie TESTING
 if (TESTING) {
